@@ -84,4 +84,14 @@ RUN gem install compass
 # redis 
 RUN apt-get install -y redis-server
 
-RUN apt-get install -y libmysqlclient-dev python-dev libxml2-dev
+RUN apt-get install -y libmysqlclient-dev
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y \
+    install xvfb sudo \
+    git wget python-numpy python-scipy netpbm \
+    python-qt4 ghostscript libffi-dev libjpeg-turbo-progs \
+    python-dev python3-dev cmake \
+    libtiff5-dev libjpeg62-turbo-dev zlib1g-dev \
+    libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev \
+    python-tk python3-tk \
+    libharfbuzz-dev libfribidi-dev && apt-get clean
