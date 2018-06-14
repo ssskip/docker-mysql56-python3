@@ -64,7 +64,6 @@ RUN { \
 # don't reverse lookup hostnames, they are usually another container
 	&& echo '[mysqld]\nskip-host-cache\nskip-name-resolve' > /etc/mysql/conf.d/docker.cnf
 
-RUN useradd -ms /bin/bash italki
 RUN apt-get update && apt-get -y dist-upgrade
 
 # SUPERVISOR 
