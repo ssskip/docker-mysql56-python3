@@ -69,8 +69,8 @@ RUN apt-get update && apt-get -y dist-upgrade
 # SUPERVISOR 
 RUN apt-get -y install supervisor
 
-# virtualenv
-RUN pip install virtualenv
+# virtualenv gunicorn
+RUN pip install virtualenv gunicorn
 
 # NGINX
 RUN apt-get -y install nginx openssl ca-certificates
